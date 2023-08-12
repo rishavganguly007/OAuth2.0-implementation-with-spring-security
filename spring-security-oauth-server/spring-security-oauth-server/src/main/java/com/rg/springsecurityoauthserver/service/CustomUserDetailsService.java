@@ -2,6 +2,7 @@ package com.rg.springsecurityoauthserver.service;
 
 import com.rg.springsecurityoauthserver.entity.User;
 import com.rg.springsecurityoauthserver.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -21,6 +22,7 @@ import java.util.List;
 @Transactional
 public class CustomUserDetailsService implements UserDetailsService {
 
+    @Autowired
     private UserRepository userRepo;
 
     @Bean
